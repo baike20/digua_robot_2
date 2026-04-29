@@ -1,0 +1,46 @@
+# Task Allocation
+
+## Overview
+This project is divided into perception, control, hardware, and interaction modules. Tasks are assigned with clear dependencies between members.
+
+---
+
+## Ryan (Perception & Decision)
+
+### Responsibilities
+- Multi-target detection (≥2 targets)
+- Adaptive algorithm adjustment based on sensor data
+- Multi-task conflict resolution (LLM-based scheduling)
+
+### Dependencies
+- Requires sensor data from Yuki
+- Outputs decision logic to Kevin's visualization module
+
+---
+
+## Yuki (System Integration & Sensors)
+
+### Responsibilities
+- Enable basic robot movement
+- Sensor integration:
+  - Ultrasonic
+  - Temperature
+  - Stereo camera
+- Target state classification
+- Voice interaction (“让一下” command)
+
+### Dependencies
+- Provides sensor input to Ryan’s algorithms
+- Provides system status to Kevin’s UI
+
+---
+
+## Kevin (Hardware & Visualization)
+
+### Responsibilities
+- Robot body design and assembly
+- Visual debugging interface
+
+### Dependencies
+- Receives system data from Yuki
+- Displays algorithm output from Ryan
